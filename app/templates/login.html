@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content%}
+<div class="jumbotron">
+  {% from "macro.html" import render_field %}
+  <h1>Login to Flask Boilerplate</h1>
+  <br>
+  <form method="POST" action="." class="form form-horizontal">
+    {{ form.csrf_token }}
+    {{ render_field(form.name, class="input-xlarge",placeholder="Username") }}
+    {{ render_field(form.password, class="input-xlarge", placeholder="Password") }}
+    
+    <div class="control-group">
+      <label class="control-label"></label>
+      <div class="controls">
+        <button type="submit" id="sign_in" class="btn btn-primary">Log In</button>
+      </div>
+      </div>
+      </form>
+      </div>
+
+   {% endblock %}

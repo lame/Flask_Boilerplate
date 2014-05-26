@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content%}
+<div class="jumbotron">
+  {% from "macro.html" import render_field %}
+  <h1>Flask Boilerplace Create Account</h1><br><br>
+  <br>
+  <form method="POST" action="." class="form form-horizontal">
+    {{ form.csrf_token }}
+    <br><br>
+    {{ render_field(form.name, class="input-xlarge",placeholder="Username") }}
+    {{ render_field(form.password, class="input-xlarge", placeholder="Password") }}
+    {{ render_field(form.confirm, class="input-xlarge", placeholder="Confirm Password")}}
+    
+    <div class="control-group">
+      <label class="control-label"></label>
+      <div class="controls">
+        <button type="submit" id="sign_in" class="btn btn-primary">Create Account</button>
+      </div>
+      <a href="/login" style="float:right;margin-right: 120px;">Already registered?</a>
+      </div>
+      </form>
+      </div>
+ {% endblock %}

@@ -1,0 +1,9 @@
+Dear {{user.name}},
+
+{{user.name}} is now an active user. Click on the following link to return to the Flask Boilerplate Website:
+
+{{url_for('login', _external = True)}}
+
+Regards,
+
+Webmaster
